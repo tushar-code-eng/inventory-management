@@ -39,20 +39,17 @@ const SidebarLink = ({
   return (
     <Link href={href}>
       <div
-        className={`cursor-pointer flex items-center ${
-          isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
-        }
-        hover:text-blue-900 hover:bg-blue-900 gap-3 transition-colors ${
-          isActive ? "bg-blue-900 text-white" : ""
-        }
+        className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
+          }
+        hover:text-blue-900 hover:bg-blue-900 gap-3 transition-colors ${isActive ? "bg-blue-900 text-white" : ""
+          }
       }`}
       >
         <Icon className="w-6 h-6 !text-white" />
 
         <span
-          className={`${
-            isCollapsed ? "hidden" : "block"
-          } font-medium text-white`}
+          className={`${isCollapsed ? "hidden" : "block"
+            } font-medium text-white`}
         >
           {label}
         </span>
@@ -71,30 +68,26 @@ const Sidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
   };
 
-  const sidebarClassNames = `text-white fixed flex flex-col ${
-    isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-  } bg-gray-900 transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
+  const sidebarClassNames = `text-white fixed flex flex-col ${isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
+    } bg-gray-900 transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
 
   return (
     <div className={sidebarClassNames}>
       {/* TOP LOGO */}
       <div
-        className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
-          isSidebarCollapsed ? "px-5" : "px-8"
-        }`}
+        className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed ? "px-5" : "px-8"
+          }`}
       >
         <Image
-          src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"
-          // src={logo}
-          alt="edstock-logo"
+          src="https://s3-inventorymanagementwow.s3.ap-south-1.amazonaws.com/logo.svg"
+          alt="Track Stack"
           width={27}
           height={27}
           className="rounded w-8"
         />
         <h1
-          className={`${
-            isSidebarCollapsed ? "hidden" : "block"
-          } font-extrabold text-2xl`}
+          className={`${isSidebarCollapsed ? "hidden" : "block"
+            } font-extrabold text-2xl`}
         >
           Track Stack
         </h1>
